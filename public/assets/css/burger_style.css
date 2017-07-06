@@ -1,0 +1,53 @@
+body {
+	background: orange;
+	color: navy;
+}
+
+h1 {
+	text-align: center;
+	color: navy;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+}
+
+li {
+	background: white;
+	width: 150px;
+	padding-top: 10px;
+	padding-left: 7px;
+	margin-bottom: 5px;
+	border: solid 1px navy;
+}
+
+#devourItButton,
+#orderAnotherButton {
+	background: navy;
+	color: white;
+	border: solid 1px navy;
+	position: relative;
+	left: 155px;
+	bottom: 23px;
+}
+
+#devourItForm,
+#orderMoreForm {
+	height: 10px;
+}
+
+#updateForm {
+	background: white;
+	color: navy;
+	padding: 20px;
+	padding-left: 50px;
+	border: solid 1px navy;
+}
+
+#burgerClipArt {
+	height: 25%;
+	width: 25%;
+	position: relative;
+	left: 425px;
+}
