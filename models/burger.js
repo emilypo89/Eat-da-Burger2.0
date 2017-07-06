@@ -1,28 +1,22 @@
-// import `orm.js` into `burger.js`
-var orm = require("../config/orm.js");
+// Require the sequelize library
+var Sequelize = require("sequelize");
+// Require the connection to the database (connection.js)
+var sequelize = require("../config/connection.js");
 
-// code that will call the ORM functions using burger specific input for the ORM.
-var burgers = {
-	selectAll: function(cb){
-		orm.selectAll("burgers", function(res) {
-			cb(res);
-		});
+// burger model
+var Burger = sequelize.define("burgers", {
+	burger_name: {
+		type: Sequelize.STRING
 	},
-	insertOne: function(cols, vals, cb) {
-		orm.insertOne("burgers", cols, vals, function(res) {
-			cb(res);
-		});
-	},
-	updateOne: function(objColVals, condition, cb) {
-		orm.updateOne("burgers", objColVals, condition, function(res){
-			cb(res);
-		});
-
+	devoured: {
+		type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false
 	}
-
-}
-
+});
 
 
-// Export `burger.js` file.
-module.exports = burgers;
+// Sync model with DB
+Burger.sync();
+
+// Export the book model for other files to use
+
+module.exports = Burger;
