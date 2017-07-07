@@ -20,7 +20,7 @@ var router = express.Router();
     // redirected back the the get request to show all the burgers, including the new one on the page
     router.post("/", function(req, res) {
         db.Burger.create({
-          burger_name: req.body.name,
+          burger_name: req.body.burger_name,
           devoured: req.body.devoured
         }).then(function(data){
           res.redirect("/");
@@ -30,10 +30,10 @@ var router = express.Router();
     // put request to update the page when the devoured state changes from false to true
     router.put("/:id", function(req, res) {
         db.Burger.update({
-          devoured: req.body.devoured,
+          devoured: req.body.devoured
         }, {
           where: {
-            id: req.body.id
+            id: req.params.id
           }
         }).then(function(data) {
             res.redirect("/");
