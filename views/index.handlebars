@@ -14,8 +14,9 @@
               {{!-- I also want the button to complete both of these things --}}
               <form action="/{{this.id}}?_method=PUT" method="POST" id="devourItForm">
                 <input id="burgerDisplay" type="hidden" name="devoured" value="true">
-                <input id="customerDisplay" type="hidden" name="name">
-                <input type="text" id="customerAdd" name="name">
+                {{!-- these are the input area for a new customer --}}
+                {{!-- <input id="customerDisplay" type="hidden" name="name"> --}}
+                {{!-- <input type="text" id="customerAdd" name="name"> --}}
                 <button type="submit" id="devourItButton">Devour it!</button>
               </form>
             </li>
