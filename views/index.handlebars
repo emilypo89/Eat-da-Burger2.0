@@ -10,9 +10,12 @@
           {{#unless this.devoured}}
             <li>
               {{this.burger_name}}
-
+              {{!-- I am trouble with this form because I want to make a put request to update the devoured burger and I also want to make a post request to create a new customer --}}
+              {{!-- I also want the button to complete both of these things --}}
               <form action="/{{this.id}}?_method=PUT" method="POST" id="devourItForm">
                 <input id="burgerDisplay" type="hidden" name="devoured" value="true">
+                <input id="customerDisplay" type="hidden" name="name">
+                <input type="text" id="customerAdd" name="name">
                 <button type="submit" id="devourItButton">Devour it!</button>
               </form>
             </li>
@@ -28,16 +31,19 @@
         {{#each burgers}}
           {{#if this.devoured}}
             <li>
-              {{this.burger_name}}
-
+              {{this.burger_name}} 
               <form action="/{{this.id}}?_method=PUT" method="POST" id="orderMoreForm">
                 <input type="hidden" name="devoured" value="false">
                 <button type="submit" id="orderAnotherButton">Order Another!</button>
               </form>
+              {{#each customer}}
+                {{this.name}}
+              {{/each}}  
             </li>
           {{/if}}
         {{/each}}
       </ul>
+      <ul>
     </div>
     <div class="col-md-1"></div>
   </div>
@@ -46,18 +52,15 @@
     <div class="col-md-6">
       <h2>Add a Burger</h2>
       <form class="create-update-form" action="/" method="POST" id="updateForm">
-
         <div class="form-group">
           <label for="ca">Burger Name:</label>
           <input type="text" id="ca" name="burger_name">
         </div>
-
         <div class="form-group">
           {{!-- <label for="slee">Devoured?</label><br> --}}
           {{!-- <input type="radio" name="devoured" value="1" checked> Devoured!<br> --}}
           {{!-- <input type="radio" name="devoured" value="0"> Not Devoured --}}
         </div>
-
         <button type="submit">Add Burger</button>
       </form>
     </div>
