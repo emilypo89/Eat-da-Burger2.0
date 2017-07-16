@@ -20,5 +20,5 @@ The npm packages used are Sequelized, Handlebars, Express, mysql, Body-Parser, a
 
 
 
-### Example
-![burger](/public/assets/img/bamazon.mp4)
+## Example
+![burger](./public/assets/img/bamazon.mp4)
