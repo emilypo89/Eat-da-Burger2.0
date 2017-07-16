@@ -11,6 +11,8 @@ Here the user can push the "devour" button and the burger will move to the other
 Once the burger moves to this side of the screen the user can order another one and then the burger moves back across the screen. 
 
 
+![burger](./public/assets/img/burgers.png)
+
 
 ## Languages and Packages Used
 
@@ -21,4 +23,5 @@ The npm packages used are Sequelized, Handlebars, Express, mysql, Body-Parser, a
 
 
 ## Example
-![burger](./public/assets/img/bamazon.mp4)
+
+![burger](./public/assets/img/Burgers.mp4)
