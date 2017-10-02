@@ -1,4 +1,4 @@
-# Sequelized Burger
+# Eat da Burger 2.0
 
 This application recreates the Burger application but utitlizes the node management package Sequelize to call the routes rather than creating orm functions. 
 
@@ -19,9 +19,3 @@ Once the burger moves to this side of the screen the user can order another one 
 This application uses HTML, CSS, Bootstrap, JavaScript, and mySQL.
 
 The npm packages used are Sequelized, Handlebars, Express, mysql, Body-Parser, and method-override
-
-
-
-## Example
-
-![burger](./public/assets/img/Burgers.mp4)
