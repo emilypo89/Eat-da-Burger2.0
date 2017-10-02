@@ -1,16 +1,25 @@
 body {
-	background: orange;
-	color: navy;
+	background: #F98643;
+	/*color: navy;*/
+	font-family: 'Fredoka One', cursive;
 }
 
 h1 {
 	text-align: center;
-	color: navy;
+	color: white;
+	font-size: 70px;
+	background-color: #91CB3E;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 h2 {
 	text-align: center;
 	color: white;
+	background-color: #92C11B;
+	padding: 5px;
+	margin-bottom: 0;
+	font-size: 30px;
 }
 
 li {
@@ -20,13 +29,15 @@ li {
 	padding-left: 7px;
 	margin-bottom: 5px;
 	border: solid 1px navy;
+	color: #4C5B5C;
 }
 
 #devourItButton,
-#orderAnotherButton {
-	background: navy;
+#orderAnotherButton,
+#submitBurgerButton {
+	background-color: #4C5B5C;
 	color: white;
-	border: solid 1px navy;
+	border: solid 1px #4C5B5C;
 	position: relative;
 	left: 155px;
 	bottom: 23px;
@@ -37,12 +48,22 @@ li {
 	height: 10px;
 }
 
+#burgersToEat,
+#burgersDevoured {
+	background-color: #91CB3E;
+	padding: 10px;
+	padding-top: 30px;
+	min-height: 300px;
+}
+
 #updateForm {
-	background: white;
-	color: navy;
+	background: #91CB3E;
+	color: #4C5B5C;
 	padding: 20px;
 	padding-left: 50px;
-	border: solid 1px navy;
+	/*border: solid 1px #4C5B5C;*/
+	font-size: 20px;
+	margin-bottom: 20px;
 }
 
 #burgerClipArt {
@@ -50,4 +71,7 @@ li {
 	width: 25%;
 	position: relative;
 	left: 425px;
+	border-radius: 50%;
+	border: solid 20px #91CB3E;
+	background-color: #91CB3E;
 }
